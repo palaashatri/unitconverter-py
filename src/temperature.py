@@ -5,6 +5,8 @@ import urllib.request
 import webbrowser
 from functools import partial
 from tkinter import Tk, StringVar , ttk
+from . import convert_temp
+
 
 def TemperatureConverter():
     def convert():
@@ -13,9 +15,9 @@ def TemperatureConverter():
         kelTemp = kelTempVar.get()
 
         if celTempVar.get() != 0.0:
-            celToFah = (celTemp *  9/5 + 32)
+            #celToFah = (celTemp *  9/5 + 32)
             celToKel = celTemp + 273.15
-            fahTempVar.set(celToFah)
+            fahTempVar.set(convert_temp.convert(celTemp))
             kelTempVar.set(celToKel)
 
         elif fahTempVar.get() != 0.0:
