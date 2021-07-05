@@ -10,10 +10,7 @@ from . import convert_length
 def LengthConverter():
     factors = {'nmi' : 1852, 'mi' : 1609.34, 'yd' : 0.9144, 'ft' : 0.3048, 'inch' : 0.0254, 'km' : 1000, 'm' : 1, 'cm' : 0.01, 'mm' : 0.001}
     ids = {"Nautical Miles" : 'nmi', "Miles" : 'mi', "Yards" : 'yd', "Feet" : 'ft', "Inches" : 'inch', "Kilometers" : 'km', "meters" : 'm', "centimeters" : 'cm', "millileters" : 'mm'}
-
-   
-    
-
+       
     def callback():
         try:
             amt = float(in_field.get())
@@ -31,7 +28,6 @@ def LengthConverter():
    
     root = Toplevel()
     root.title("Length Converter")
-
     
     mainframe = ttk.Frame(root, padding="3 3 12 12")
     mainframe.pack(fill=BOTH, expand=1)
@@ -52,10 +48,7 @@ def LengthConverter():
 
     
     in_select = OptionMenu(mainframe, in_unit, "Nautical Miles", "Miles", "Yards", "Feet", "Inches", "Kilometers", "meters", "centimeters", "millileters").grid(column=3, row=1, sticky=W)
-
-    
-
-    
+        
     ttk.Entry(mainframe, textvariable=out_amt, state="readonly").grid(column=2, row=3, sticky=(W, E))
     in_select = OptionMenu(mainframe, out_unit, "Nautical Miles", "Miles", "Yards", "Feet", "Inches", "Kilometers", "meters", "centimeters", "millileters").grid(column=3, row=3, sticky=W)
 

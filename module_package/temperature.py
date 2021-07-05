@@ -12,8 +12,6 @@ def TemperatureConverter():
         fahTemp = fahTempVar.get()
         kelTemp = kelTempVar.get()
 
-
-
         if celTempVar.get() != 0.0:
             celToFah = (celTemp *  9/5 + 32)
             celToKel = celTemp + 273.15

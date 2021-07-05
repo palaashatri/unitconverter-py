@@ -13,10 +13,7 @@ def AreaConverter():
                     'sqyard':0.83612736, 'sqtownship':93239571.9721, 'sqacre':4046.8564224 ,'sqare': 100,
                     'sqbarn':1e-28, 'sqhectare':10000, 'sqhomestead':647497.027584}
     ids = {"square meter" : 'sqm', "square km" : 'sqkm', "square rood" : 'sqr', "square cm" : 'sqcm', "square foot" : 'sqf', "square inch" : 'sqin', "square mile" : 'sqmile', "square milimeter" : 'mm', "square rod" : 'sqrod', "square yard": 'sqyard', "square township": 'sqtownship',"square acre": 'sqacre',"square are": 'sqare',"square barn": 'sqbarn',"square hectare": 'sqhectare',"square homestead": 'sqhomestead'}
-
-   
-    
-
+ 
     def callback():
         try:
             amt = float(in_field.get())
@@ -55,15 +52,11 @@ def AreaConverter():
 
     
     in_select = OptionMenu(mainframe, in_unit, "square meter", "square km", "square rood", "square cm", "square foot", "square inch", "square mile", "square milimeter", "square rod","square yard", "square township","square acre","square are","square barn", "square hectare","square homestead").grid(column=3, row=1, sticky=W)
-
-    
-
-    
+   
     ttk.Entry(mainframe, textvariable=out_amt, state="readonly").grid(column=2, row=3, sticky=(W, E))
     in_select = OptionMenu(mainframe, out_unit, "square meter", "square km", "square rood", "square cm", "square foot", "square inch", "square mile", "square milimeter", "square rod","square yard", "square township","square acre","square are","square barn", "square hectare","square homestead").grid(column=3, row=3, sticky=W)
 
     calc_button = ttk.Button(mainframe, text="Calculate", command=callback).grid(column=2, row=2, sticky=E)
 
     for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
-
     in_field.focus()
