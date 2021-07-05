@@ -16,21 +16,21 @@ def TemperatureConverter():
 
         if celTempVar.get() != 0.0:
             #celToFah = (celTemp *  9/5 + 32)
-            celToKel = celTemp + 273.15
-            fahTempVar.set(convert_temp.convert(celTemp))
-            kelTempVar.set(celToKel)
+            #celToKel = celTemp + 273.15
+            fahTempVar.set(convert_temp.convert_celToFah(celTemp))
+            kelTempVar.set(convert_temp.covert_celToKel(celTemp))
 
         elif fahTempVar.get() != 0.0:
-            fahToCel = ((fahTemp - 32) * (5/9))
-            fahToKel = (fahTemp - 32) * (5/9) + 273.15
-            celTempVar.set(fahToCel)
-            kelTempVar.set(fahToKel)
+            #fahToCel = ((fahTemp - 32) * (5/9))
+            #fahToKel = (fahTemp - 32) * (5/9) + 273.15
+            celTempVar.set(convert_temp.convert_fahToCel(fahTemp))
+            kelTempVar.set(convert_temp.convert_fahToKel(fahTemp))
         
         elif kelTempVar.get() !=0.0:
-            kelToCel = kelTemp - 273.15
-            kelToFah = (kelTemp - 273.15) * 9/5 + 32
-            celTempVar.set(kelToCel)
-            fahTempVar.set(kelToFah)
+            #kelToCel = kelTemp - 273.15
+            #kelToFah = (kelTemp - 273.15) * 9/5 + 32
+            celTempVar.set(convert_temp.convert_kelToCel(kelTemp))
+            fahTempVar.set(convert_temp.convert_kelTofah(kelTemp))
             
 
     def reset():
