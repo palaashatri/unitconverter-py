@@ -5,7 +5,7 @@ import urllib.request
 import webbrowser
 from functools import partial
 from tkinter import Tk, StringVar , ttk
-from module_package import area, digital, length, temperature, weight
+from src import area, digital, length, temperature, weight
        
 root = Tk()
 root.title('Unit Converter')

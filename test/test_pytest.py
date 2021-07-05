@@ -1,5 +1,5 @@
 import pytest
-from module_package import convert_digital, convert_weight, convert_length, convert_area
+from src import convert_digital, convert_weight, convert_length, convert_area
 
 def test_convert_digital():
     assert convert_digital.convert(1,"kB","byte") == 1000
