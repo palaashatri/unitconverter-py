@@ -19,4 +19,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint index.py module_package
+        find . -iname "*.py" -exec pylint -E {} ;\
