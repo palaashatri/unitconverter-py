@@ -3,7 +3,7 @@
 [![Pytest Unit Test](https://github.com/netizener/abc/actions/workflows/pytest-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/pytest-app.yml)
 [![Build Python application](https://github.com/netizener/abc/actions/workflows/build-python-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/build-python-app.yml)
 [![Linting with Flake8](https://github.com/netizener/abc/actions/workflows/lint-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/lint-app.yml)
-[![.github/workflows/code-coverage-term.yml](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml)
+
 
 
 # Build platform binary
