@@ -1,5 +1,7 @@
 __pycache__
-.pytest_cache
-build/app
+build
 dist
 app.spec
+.pytest_cache
+htmlcov
+.coverage

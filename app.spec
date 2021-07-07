@@ -4,8 +4,8 @@
 block_cipher = None
 
 
-a = Analysis(['app.py'],
-             pathex=['C:\\Users\\Palaash\\Desktop\\New folder\\abc'],
+a = Analysis(['3_Implementation\\app.py'],
+             pathex=['C:\\Users\\Palaash\\Desktop\\codespace\\sdlc-project\\sdlc2-team-23'],
              binaries=[],
              datas=[],
              hiddenimports=[],
