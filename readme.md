@@ -1,10 +1,10 @@
 # sdlc2-team-23
 ## Badges
-[![Build [PyInstaller]](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/build-app.yml/badge.svg)](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/build-app.yml)
-[![Unit Test [PyTest]](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/unit-test.yml/badge.svg)](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/unit-test.yml)
-[![Lint [Flake8]](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/flake8-lint.yml)
-[![Code Coverage [PyTest-Cov]](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/code-coverage-term.yml)
-[![Code Coverage HTML [PyTest-Cov]](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/code-coverage-html.yml/badge.svg)](https://github.com/GENESIS2021Q1/sdlc2-team-23/actions/workflows/code-coverage-html.yml)
+[![Unit Test [PyTest]](https://github.com/netizener/abc/actions/workflows/unit-test.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/unit-test.yml)
+[![Lint [Flake8]](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml)
+[![Code Coverage [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml)
+[![Code Coverage HTML [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml)
+[![Build [PyInstaller]](https://github.com/netizener/abc/actions/workflows/build-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/build-app.yml)
 
 * For offline badges, please [click here](https://github.com/GENESIS2021Q1/sdlc2-team-23/tree/main/6_Other/Offline_Badges)
 
