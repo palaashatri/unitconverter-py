@@ -1,5 +1,4 @@
-# sdlc2-team-23
-## Badges
+# Badges
 [![Unit Test [PyTest]](https://github.com/netizener/abc/actions/workflows/unit-test.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/unit-test.yml)
 [![Lint [Flake8]](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml)
 [![Code Coverage [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml)
@@ -8,7 +7,7 @@
 
 * For offline badges, please [click here](https://github.com/GENESIS2021Q1/sdlc2-team-23/tree/main/6_Other/Offline_Badges)
 
-## Unit Converter in Python
+# Unit Converter in Python
 
 ### How to run 
 * Look at this gif
