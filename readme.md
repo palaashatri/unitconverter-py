@@ -1,11 +1,9 @@
 # Unit Converter in Python
 ## Badges
-[![Unit Test [PyTest]](https://github.com/netizener/abc/actions/workflows/unit-test.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/unit-test.yml)
-[![Lint [Flake8]](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml)
-[![Code Coverage [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml)
-[![Code Coverage HTML [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml)
-[![Build [PyInstaller]](https://github.com/netizener/abc/actions/workflows/build-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/build-app.yml)
-
+[![Build [PyInstaller]](https://github.com/netizener/unitconverter-py/actions/workflows/build-app.yml/badge.svg)](https://github.com/netizener/unitconverter-py/actions/workflows/build-app.yml)
+[![Code Coverage [PyTest-Cov]](https://github.com/netizener/unitconverter-py/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/unitconverter-py/actions/workflows/code-coverage-term.yml)
+[![Lint [Flake8]](https://github.com/netizener/unitconverter-py/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/netizener/unitconverter-py/actions/workflows/flake8-lint.yml)
+[![Unit Test [PyTest]](https://github.com/netizener/unitconverter-py/actions/workflows/unit-test.yml/badge.svg)](https://github.com/netizener/unitconverter-py/actions/workflows/unit-test.yml)
 
 ## Folder Structure
 | Folder | Description |
@@ -19,6 +17,10 @@
 * The Windows Python3 installer already comes with Tkinter setup built in. For other platforms (Linux/macOS) please read the [official installation docs for Tkinter](https://tkdocs.com/tutorial/install.html)
 * Clone this repository
 * Run  `app.py` in root directory using : `python app.py` (for Windows) | `python3 app.py` (for Linux/macOS)
+
+## How to build platform-specific binary
+* Install pyinstaller : `pip install pyinstaller`
+* Build with pyinstaller : `pyinstaller --onefile app.py`
 
 ## Testing
 * Install pip iff you don't already have it installed using the [official documentation](https://pip.pypa.io/en/stable/installing/)
