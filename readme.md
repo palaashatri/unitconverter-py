@@ -1,41 +1,29 @@
-# Badges
+# Unit Converter in Python
+## Badges
 [![Unit Test [PyTest]](https://github.com/netizener/abc/actions/workflows/unit-test.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/unit-test.yml)
 [![Lint [Flake8]](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/flake8-lint.yml)
 [![Code Coverage [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-term.yml)
 [![Code Coverage HTML [PyTest-Cov]](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/code-coverage-html.yml)
 [![Build [PyInstaller]](https://github.com/netizener/abc/actions/workflows/build-app.yml/badge.svg)](https://github.com/netizener/abc/actions/workflows/build-app.yml)
 
-* For offline badges, please [click here](https://github.com/GENESIS2021Q1/sdlc2-team-23/tree/main/6_Other/Offline_Badges)
 
-# Unit Converter in Python
+## Folder Structure
+| Folder | Description |
+| --- | --- |
+| / | Root directory contains `app.py` file |
+| src | Contains modules for each implementation |
+| test | Contains tests implemented using pytest framework |
 
-### How to run 
-* Look at this gif
+## How to run
+* Install Python 3 : [Download](https://www.python.org/downloads/)
+* The Windows Python3 installer already comes with Tkinter setup built in. For other platforms (Linux/macOS) please read the [official installation docs for Tkinter](https://tkdocs.com/tutorial/install.html)
+* Clone this repository
+* Run  `app.py` in root directory using : `python app.py` (for Windows) | `python3 app.py` (for Linux/macOS)
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/44923576/124554577-bed1bb80-de53-11eb-9205-4aa1f7460cb8.gif)
-
-* Open your cmd and clone our repo through command `git clone https://github.com/GENESIS2021Q1/sdlc2-team-23.git `
-* Change Directory through command ` cd sdlc2-team-23/3_Implementation`
-* Now run the the code which is python file through command  ` python app.py/python3 app.py` 
-
-
- ### Folder Structure
- | Folder | Description | 
- |---|---|
- | 1_Requirements | Documents detailing requirements and research |
- | 2_Architecture | Documents specifying design details |
- | 3_Implementation | All code and documentation | 
- | 4_TestPlanAndOutput | Documents with test plans and procedures | 
- | 5_ImagesAndVideos | Screenshots and Demonstration video of the Project | 
-
- ## Contributor List
- | PS No. | Name | Feature Implemented |
- | --- | --- | --- |
- | 99004928 | Satwik Belaldavar | Temperature Conversion |
- | 99004929 | Aniket Garg | Area Conversion |
- | 99004930 | Palaash Atri | Length Conversion |
- | 99004931 | Hrishikesh Kholamkar | Weight Conversion |
- | 99004932 | Abhishek Kr Verma | Digital Conversion |
+## Testing
+* Install pip iff you don't already have it installed using the [official documentation](https://pip.pypa.io/en/stable/installing/)
+* Install pytest framework : `pip install -U pytest`
+* In root directory, run tests using : `pytest`
 
  ## Resources
  * [Python Tutorial](https://www.tutorialspoint.com/python/index.htm)
