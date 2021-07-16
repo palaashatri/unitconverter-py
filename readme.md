@@ -21,6 +21,8 @@
 ## How to build platform-specific binary
 * Install pyinstaller : `pip install pyinstaller`
 * Build with pyinstaller : `pyinstaller --onefile app.py`
+> Note : Windows Defender might show the built file as a trojan. This is a false positive. Heuristic based scanning will detect anything not digitally signed and packed, or has keyboard access as a trojan dropper. You can ignore the warning.
+
 
 ## Testing
 * Install pip iff you don't already have it installed using the [official documentation](https://pip.pypa.io/en/stable/installing/)
