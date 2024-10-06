@@ -21,8 +21,8 @@ def WeightConverter():
             out_amt.set('Input or output unit not chosen')
             return None
         else:
-            frm = ids[in_unit.get()]
-            to = ids[out_unit.get()]
+            frm = ids[in_unit.get()] if in_unit.get() in ids else ids[in_unit.get().lower()]
+            to = ids[out_unit.get()] if out_unit.get() in ids else ids[out_unit.get().lower()]
             out_amt.set(convert_weight.convert(amt, frm, to))
 
     
