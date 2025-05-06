@@ -35,9 +35,6 @@ jobs:
         run: |
           pyinstaller --onefile --name unitconverter main.py
 
-      - name: Debug: List files in dist directory
-        run: ls -la dist/
-
       - name: Upload .exe to Release
         uses: softprops/action-gh-release@v1
         with:
@@ -103,7 +100,7 @@ jobs:
         run: |
           pyinstaller --onefile --name unitconverter main.py
 
-      - name: Debug: List dist folder
+      - name: Debug- List dist folder
         run: ls -la dist/
 
       - name: Create Desktop Entry for AppImage
