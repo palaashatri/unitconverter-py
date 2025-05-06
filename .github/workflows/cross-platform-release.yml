@@ -3,7 +3,12 @@ name: Cross-Platform Release
 on:
   push:
     tags:
-      - 'v*'  # Trigger only on version tags like v1.0.0
+      - 'v*'  # Trigger on version tags like v1.0.0
+  workflow_run:
+    workflows:
+      - "Auto Tag"
+    types:
+      - completed
 
 jobs:
   build-windows:
