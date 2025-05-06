@@ -1,6 +1,6 @@
 # Unit Converter in Python
 ## Badges
-[![Build [PyInstaller]](https://github.com/palaashatri/unitconverter-py/actions/workflows/build-app.yml/badge.svg)](https://github.com/palaashatri/unitconverter-py/actions/workflows/build-app.yml)
+[![Cross-Platform Release](https://github.com/palaashatri/unitconverter-py/actions/workflows/cross-platform-release.yml/badge.svg)](https://github.com/palaashatri/unitconverter-py/actions/workflows/cross-platform-release.yml)
 [![Code Coverage [PyTest-Cov]](https://github.com/palaashatri/unitconverter-py/actions/workflows/code-coverage-term.yml/badge.svg)](https://github.com/palaashatri/unitconverter-py/actions/workflows/code-coverage-term.yml)
 [![Lint [Flake8]](https://github.com/palaashatri/unitconverter-py/actions/workflows/flake8-lint.yml/badge.svg)](https://github.com/palaashatri/unitconverter-py/actions/workflows/flake8-lint.yml)
 [![Unit Test [PyTest]](https://github.com/palaashatri/unitconverter-py/actions/workflows/unit-test.yml/badge.svg)](https://github.com/palaashatri/unitconverter-py/actions/workflows/unit-test.yml)
