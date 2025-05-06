@@ -1,0 +1,40 @@
+name: Auto Tag
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for getting all tags
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Get latest tag
+        id: get_tag
+        run: |
+          latest_tag=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n1)
+          echo "Latest tag: $latest_tag"
+
+          if [ -z "$latest_tag" ]; then
+            echo "tag=v0.0.1" >> $GITHUB_OUTPUT
+          else
+            IFS='.' read -r major minor patch <<<"${latest_tag#v}"
+            patch=$((patch + 1))
+            echo "tag=v$major.$minor.$patch" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create new tag and push
+        run: |
+          git tag ${{ steps.get_tag.outputs.tag }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }} ${{ steps.get_tag.outputs.tag }}
