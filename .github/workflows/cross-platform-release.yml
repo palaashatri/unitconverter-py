@@ -20,11 +20,6 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Check if tkinter is installed
-        run: |
-          python -m tkinter
-        shell: pwsh
-
       - name: Install pyinstaller and build tools
         run: |
           python -m pip install --upgrade pip
@@ -50,10 +45,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Check if tkinter is installed
-        run: |
-          python -m tkinter
 
       - name: Install py2app
         run: |
@@ -95,6 +86,9 @@ jobs:
       - name: Install tkinter
         run: |
           sudo apt-get install python3-tk
+
+      - name: Install PyInstaller
+        run: python -m pip install pyinstaller
 
       - name: Build binary
         run: |
