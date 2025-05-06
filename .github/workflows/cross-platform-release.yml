@@ -20,14 +20,23 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Check if tkinter is installed
+        run: |
+          python -m tkinter
+        shell: pwsh
+
+      - name: Install pyinstaller and build tools
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller tkinter
+          python -m pip install pyinstaller
+          pip install setuptools wheel
 
       - name: Build Windows .exe
         run: |
-          pyinstaller --onefile --name unitconverter app.py
+          pyinstaller --onefile --name unitconverter main.py
+
+      - name: Debug: List files in dist directory
+        run: ls -la dist/
 
       - name: Upload .exe to Release
         uses: softprops/action-gh-release@v1
@@ -45,17 +54,22 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Check if tkinter is installed
         run: |
-          python -m pip install --upgrade pip
-          pip install py2app tkinter
+          python -m tkinter
+
+      - name: Install py2app
+        run: |
+          python -m pip install py2app
 
       - name: Create setup.py
         run: |
           echo "from setuptools import setup" > setup.py
-          echo "APP = ['app.py']" >> setup.py
+          echo "APP = ['main.py']" >> setup.py
           echo "OPTIONS = {'argv_emulation': True}" >> setup.py
           echo "setup(app=APP, options={'py2app': OPTIONS}, setup_requires=['py2app'])" >> setup.py
+          cat setup.py  # Debug: Output setup.py content
+          ls -la  # List directory to confirm setup.py is there
 
       - name: Build macOS .app
         run: python setup.py py2app
@@ -81,23 +95,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install tkinter
         run: |
-          sudo apt-get update
-          sudo apt-get install -y fuse libfuse2 python3-tk
-          python -m pip install --upgrade pip
-          pip install pyinstaller
+          sudo apt-get install python3-tk
 
       - name: Build binary
         run: |
-          pyinstaller --onefile --name unitconverter app.py
+          pyinstaller --onefile --name unitconverter main.py
 
-      - name: Prepare AppDir
+      - name: Debug: List dist folder
+        run: ls -la dist/
+
+      - name: Create Desktop Entry for AppImage
         run: |
-          mkdir -p AppDir/usr/bin
-          cp dist/unitconverter AppDir/usr/bin/
-          chmod +x AppDir/usr/bin/unitconverter
-
           mkdir -p AppDir/usr/share/applications
           echo "[Desktop Entry]
           Type=Application
@@ -106,8 +116,11 @@ jobs:
           Icon=unitconverter
           Categories=Utility;" > AppDir/usr/share/applications/unitconverter.desktop
 
-          mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
-          # Optional: cp icon.png AppDir/usr/share/icons/hicolor/256x256/apps/unitconverter.png
+      - name: Prepare AppDir
+        run: |
+          mkdir -p AppDir/usr/bin
+          cp dist/unitconverter AppDir/usr/bin/
+          chmod +x AppDir/usr/bin/unitconverter
 
       - name: Download appimagetool
         run: |
